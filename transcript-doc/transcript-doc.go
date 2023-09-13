@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"strings"
+	
 )
 
 var (
@@ -20,6 +20,7 @@ var (
 
 var (
 	alinanNotlar       [100]float32 = [100]float32{}
+	notOrtalamasi       [100]float32 = [100]float32{}
 	alinanHarfNotlari  [100]string  = [100]string{}
 	ogrenciDurumlari   [100]string  = [100]string{}
 	gecenOgrenciSayisi int          = 0
@@ -28,18 +29,11 @@ var (
 )
 
 func main() {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	for i:=0; i<100; i++ {
+		notOrtHesap(i)
+}
+fmt.Println(notOrtalamasi)
+}
+func notOrtHesap(i int){
+	notOrtalamasi[i] =vize1Notlari[i]*sinavAgirliklari[0]/100+vize2Notlari[i]*sinavAgirliklari[1]/100+finalNotlari[i]*sinavAgirliklari[2]/100		
 }
