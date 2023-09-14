@@ -7,7 +7,7 @@ import (
 
 var (
 	harfNotlari      [9]string  = [9]string{"AA", "BA", "BB", "CB", "CC", "DC", "DD", "FD", "FF"}
-	harfSinirlari    [7]float32 = [7]float32{90, 80, 70, 60, 50, 40, 30}
+	harfSinirlari    [8]float32 = [8]float32{90, 80, 70, 60, 50, 40, 30,20}
 	sinavAgirliklari [3]float32 = [3]float32{30, 30, 40}
 )
 
@@ -31,9 +31,36 @@ var (
 func main() {
 	for i:=0; i<100; i++ {
 		notOrtHesap(i)
+		harfNotuBulma(i)
 }
 fmt.Println(notOrtalamasi)
+fmt.Println(alinanHarfNotlari)
 }
+
+
 func notOrtHesap(i int){
 	notOrtalamasi[i] =vize1Notlari[i]*sinavAgirliklari[0]/100+vize2Notlari[i]*sinavAgirliklari[1]/100+finalNotlari[i]*sinavAgirliklari[2]/100		
+}
+
+
+func harfNotuBulma(i int){ortalama:=notOrtalamasi[i]
+	if finalNotlari[i] == -1 {
+		alinanHarfNotlari[i] = harfNotlari[8]
+	} else if ortalama>harfSinirlari[0]{
+		alinanHarfNotlari[i] = harfNotlari[0]
+	} else if ortalama>harfSinirlari[1]{
+		alinanHarfNotlari[i] = harfNotlari[1]
+	} else if ortalama>harfSinirlari[2]{
+		alinanHarfNotlari[i] = harfNotlari[2]
+	} else if ortalama>harfSinirlari[3]{
+		alinanHarfNotlari[i] = harfNotlari[3]
+	} else if ortalama>harfSinirlari[4]{
+		alinanHarfNotlari[i] = harfNotlari[4]
+	} else if ortalama>harfSinirlari[5]{
+		alinanHarfNotlari[i] = harfNotlari[5]
+	} else if ortalama > harfSinirlari[6]{
+		alinanHarfNotlari[i] = harfNotlari[6]
+	} else if ortalama > harfSinirlari[7]{
+		alinanHarfNotlari[i] = harfNotlari[7]
+	}
 }
