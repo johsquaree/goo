@@ -1,0 +1,24 @@
+---------------------------OYUNUN KURALLI VE OYNANIŞ---------------------------------------------
+bu kartlar rastgele dağıtılıyor ve sıraya koyuluyor.
+oyuncu bir rakam seçiyor ve o rakamdaki kartı açıp çıkan rakama bakıyor.
+çıkan rakam neyse onu dizdiği kartlarin sırasındaki hangi index için kullacağına karar veriyor.
+sıfırı ilk bulan oyuncu oyunu kazanır
+maximum hamle sayısı 3tür
+=================================================================================================
+
+1-iki oyuncu tanımlanmalı ve bunların 10 indexlik kartlar dizisi olmalı
+2-kartlar dizisine her index için rastgele rakam atayan olmalı.
+3-diziler hazır oldğu zaman ilk açılacak kart için index bilgisi alınmalı.
+4-alınan index bilgisi sıfıra eşit mi bakılmalı eşitse oyunu kazanmıştır(iki oyuncuda 0 çıktıysa oyun biter yeni oyun)
+5-sıfır değilse açılan karttaki sayı neyse dizinin o indexine gidilir.
+6-gidilen indexteki sayı 0 mi bakılır sıfırssa oyunu kazanmıştır.(iki oyuncuda 0 çıktıysa oyun biter yeni oyun)
+7-sıfır değilse açılan karttaki indexe gidilir.
+8-açılan kart 0 ise oyunu kazanmıştır.(iki oyuncuda 0 çıktıysa oyun biter yeni oyun)
+9-üç hamle olmuştur.sıfırı bulan kimse olmadığı için oyun biter.
+10-YENİ OYUN.
+=================================================================================================
+
+GÜNCELLEME
+1-ouncular için hazırlanan sayılar her index için rakamlardan rsagele seçilmiştir.
+2-oyunun daha kolay sona ulaşması için hamle sayısı 5e yükseltirmiştir.
+
