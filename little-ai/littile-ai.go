@@ -6,7 +6,7 @@ import (
 	"time"
 	"bufio"
 	"os"
-	"strings" // Ekledik
+	"strings"
 )
 
 var responses = []string{
