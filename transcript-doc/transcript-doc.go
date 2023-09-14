@@ -25,6 +25,7 @@ var (
 	ogrenciDurumlari   [100]string  = [100]string{}
 	gecenOgrenciSayisi int          = 0
 	kalanOgrenciSayisi int          = 0
+	sarliGegenOgrenciSayisi int = 0 
 	gecerNot           float32      = 0
 )
 
@@ -32,9 +33,25 @@ func main() {
 	for i:=0; i<100; i++ {
 		notOrtHesap(i)
 		harfNotuBulma(i)
-}
-fmt.Println(notOrtalamasi)
+
+		harfler:=alinanHarfNotlari[i]
+
+		if harfler==harfNotlari[8]{
+			kalanOgrenciSayisi++
+		} else if harfler==harfNotlari[7]{
+			sarliGegenOgrenciSayisi++
+		} else {
+			gecenOgrenciSayisi++
+		}
+
+		fmt.Println("Ad-Soyad: ",katilanlar[i],"\nNot-Ortalamasi: ",notOrtalamasi[i],"\nHarf-Notu: ",alinanHarfNotlari[i],"\n =================================================================")
+	}
+/*fmt.Println(notOrtalamasi)
 fmt.Println(alinanHarfNotlari)
+fmt.Println(kalanOgrenciSayisi)
+fmt.Println(sarliGegenOgrenciSayisi)
+fmt.Println(gecenOgrenciSayisi)
+*/
 }
 
 
@@ -64,3 +81,4 @@ func harfNotuBulma(i int){ortalama:=notOrtalamasi[i]
 		alinanHarfNotlari[i] = harfNotlari[7]
 	}
 }
+//çalışıyosa dokunma
