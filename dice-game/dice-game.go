@@ -85,30 +85,36 @@ func main(){
 	fmt.Printf("Mavi Takim Ilk Indexinizi Seciniz:\n",)
 	fmt.Scanf("%d",&b)
 	time.Sleep(time.Second*1)
-	for k:=1; k<11; k++{
-		fmt.Printf("Mavi takimin acilan %d. karti:%d\n",k,blueGamer[b])
-		if blueGamer[b]==0{
-			fmt.Printf("Mavi Takimda Kazanmiştir\n")
-			break
-		}
-		b=blueGamer[b]
-	}
-
-	time.Sleep(time.Second*5)
 	r:=0
 	fmt.Printf("Kirmizi Takim Ilk Indexinizi Seciniz:\n",)
 	fmt.Scanf("%d",&r)
 	time.Sleep(time.Second*1)
+	a:=0
 
-	for k:=1; k<11; k++{
+	for k:=1; k<6; k++{
+		fmt.Printf("Mavi takimin acilan %d. karti:%d\n",k,blueGamer[b])
 		fmt.Printf("Kirmizi takimin acilan %d. karti:%d\n",k,redGamer[r])
-		if redGamer[r]==0{
-			fmt.Printf("Kirmizi Takimda Kazanmiştir\n")
+		if blueGamer[b]==0 && redGamer[r]==0 {
+			fmt.Printf("Iki Takimda Kazanmiştir\n=================================================\nKARTLAR YENIDEN DAGITILIYOR.")
 			break
+		}else if blueGamer[b]==0{
+			fmt.Printf("Mavi Takim Kazanmistir.\n")
+			break
+		}else if redGamer[r]==0{
+			fmt.Printf("Kirmizi Takim Kazanmistir.\n")
+            break
+		}else{
+			time.Sleep(time.Second*3)
 		}
+		b=blueGamer[b]
 		r=redGamer[r]
+		fmt.Printf("\nYENI INDEXE AIT KART ACILIYOR.\n")
+		a+=1
+	}
+	time.Sleep(time.Second*5)
+	if a==5{
+			fmt.Printf("\nHAMLE SAYISI MAXIMUMA ULASMISTIR.\n=================================================\nYENI OYUNU BASLANILIYOR.\n")
 	}
 	fmt.Printf("MAVI TAKIMIN KARTLARI:%v \n",blueGamer)
 	fmt.Printf("KIRMIZI TAKIMIN KARTLARI:%v \n",redGamer)
 }
-
