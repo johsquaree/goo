@@ -8,7 +8,7 @@ func main(){
 	rand.Seed(time.Now().UnixNano())
 	redGamer:=[]int{rand.Intn(10),rand.Intn(10),rand.Intn(10),rand.Intn(10),rand.Intn(10),rand.Intn(10),rand.Intn(10),rand.Intn(10),rand.Intn(10),rand.Intn(10)}
 	blueGamer:=[]int{rand.Intn(10),rand.Intn(10),rand.Intn(10),rand.Intn(10),rand.Intn(10),rand.Intn(10),rand.Intn(10),rand.Intn(10),rand.Intn(10),rand.Intn(10)}
-	blueIndex := 0
+/*	blueIndex := 0
 	redIndex := 0
 
 	fmt.Printf("Mavi Takim Ilk Indexinizi Seciniz:\n",)
@@ -80,7 +80,35 @@ func main(){
 	} else {
 		fmt.Printf("Kartlar Yeniden Dağitiliyor\n")
 	}
+	*/
+	b:=0
+	fmt.Printf("Mavi Takim Ilk Indexinizi Seciniz:\n",)
+	fmt.Scanf("%d",&b)
+	time.Sleep(time.Second*1)
+	for k:=1; k<11; k++{
+		fmt.Printf("Mavi takimin acilan %d. karti:%d\n",k,blueGamer[b])
+		if blueGamer[b]==0{
+			fmt.Printf("Mavi Takimda Kazanmiştir\n")
+			break
+		}
+		b=blueGamer[b]
+	}
 
+	time.Sleep(time.Second*5)
+	r:=0
+	fmt.Printf("Kirmizi Takim Ilk Indexinizi Seciniz:\n",)
+	fmt.Scanf("%d",&r)
+	time.Sleep(time.Second*1)
 
-
+	for k:=1; k<11; k++{
+		fmt.Printf("Kirmizi takimin acilan %d. karti:%d\n",k,redGamer[r])
+		if redGamer[r]==0{
+			fmt.Printf("Kirmizi Takimda Kazanmiştir\n")
+			break
+		}
+		r=redGamer[r]
+	}
+	fmt.Printf("MAVI TAKIMIN KARTLARI:%v \n",blueGamer)
+	fmt.Printf("KIRMIZI TAKIMIN KARTLARI:%v \n",redGamer)
 }
+
