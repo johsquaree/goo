@@ -25,4 +25,62 @@ func main(){
 	//oyuncuların kartlarını görme
 	fmt.Printf("%v \n",blueGamer)
 	fmt.Printf("%v \n",redGamer)
+
+	if redGamer[redIndex]==0 &&blueGamer[blueIndex]==0 {
+		fmt.Printf("Iki Takimda Kazanmiştir\n")
+	} else if redGamer[redIndex]==0{
+		fmt.Printf("Kirmizi Takimda Kazanmiştir\n")
+	} else if blueGamer[blueIndex]==0{
+		fmt.Printf("Mavi Takimda Kazanmiştir\n")
+	} else {
+		fmt.Printf("Kartlar Yeniden Dağitiliyor\n")
+	}
+	
+	yeniRedIndex:=redGamer[redIndex]
+	yeniBlueIndex:=blueGamer[blueIndex]
+	fmt.Printf("Mavi takimin açilan ilk karti:%d\n",blueGamer[yeniBlueIndex])
+	fmt.Printf("Kirmizi takimin acilan ilk karti:%d\n",redGamer[yeniRedIndex])
+
+	if yeniBlueIndex==0 &&yeniRedIndex==0 {
+		fmt.Printf("Iki Takimda Kazanmiştir\n")
+	} else if yeniBlueIndex==0{
+		fmt.Printf("Mavi Takimda Kazanmiştir\n")
+	} else if yeniRedIndex==0{
+		fmt.Printf("Kirmizi Takimda Kazanmiştir\n")
+	} else {
+		fmt.Printf("Kartlar Yeniden Dağitiliyor\n")
+	}
+
+	yeni2RedIndex:=redGamer[yeniRedIndex]
+	yeni2BlueIndex:=blueGamer[yeniBlueIndex]
+	fmt.Printf("Mavi takimin açilan ilk karti:%d\n",blueGamer[yeni2BlueIndex])
+	fmt.Printf("Kirmizi takimin acilan ilk karti:%d\n",redGamer[yeni2RedIndex])
+
+	if yeni2BlueIndex==0 &&yeni2RedIndex==0 {
+		fmt.Printf("Iki Takimda Kazanmiştir\n")
+	} else if yeni2BlueIndex==0{
+		fmt.Printf("Mavi Takimda Kazanmiştir\n")
+	} else if yeni2RedIndex==0{
+		fmt.Printf("Kirmizi Takimda Kazanmiştir\n")
+	} else {
+		fmt.Printf("Kartlar Yeniden Dağitiliyor\n")
+	}
+
+	yeni3RedIndex:=redGamer[yeni2RedIndex]
+	yeni3BlueIndex:=blueGamer[yeni2BlueIndex]
+	fmt.Printf("Mavi takimin açilan ilk karti:%d\n",blueGamer[yeni3BlueIndex])
+	fmt.Printf("Kirmizi takimin acilan ilk karti:%d\n",redGamer[yeni3RedIndex])
+
+	if yeni3BlueIndex==0 &&yeni3RedIndex==0 {
+		fmt.Printf("Iki Takimda Kazanmiştir\n")
+	} else if yeni3BlueIndex==0{
+		fmt.Printf("Mavi Takimda Kazanmiştir\n")
+	} else if yeni3RedIndex==0{
+		fmt.Printf("Kirmizi Takimda Kazanmiştir\n")
+	} else {
+		fmt.Printf("Kartlar Yeniden Dağitiliyor\n")
+	}
+
+
+
 }
