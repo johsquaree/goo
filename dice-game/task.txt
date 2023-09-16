@@ -22,3 +22,4 @@ GÜNCELLEME
 1-ouncular için hazırlanan sayılar her index için rakamlardan rsagele seçilmiştir.
 2-oyunun daha kolay sona ulaşması için hamle sayısı 5e yükseltirmiştir.
 
+
