@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"math/rand"
-	"time"
 	"bufio"
 	"os"
 	"strings"
@@ -37,7 +36,7 @@ var responses = []string{
 }
 
 func getRandomResponse() string {
-	rand.Seed(time.Now().UnixNano())
+	
 	randomIndex := rand.Intn(len(responses))
 	return responses[randomIndex]
 }
