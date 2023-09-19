@@ -1,0 +1,56 @@
+
+	// int -> Tamsayı
+	// float -> Ondalıklı sayı
+	// string -> Metin
+	// bool -> evet, hayır (true, false)
+
+	// if
+	// else if
+	// else
+
+	// array -> dizi Aynı türden verileri tutar (sabit uzunluk)
+	// slice -> dilim Aynı türden verileri tutar (değişken uzunluk)
+	// map -> harita Aynı türden verileri tutar (anahtar değer)
+
+	/*var sayilar []int = []int{121, 144, 169, 196, 225}
+	for i := 0; i < len(sayilar); i++ {
+		fmt.Println(sayilar[i])
+	}*/
+
+	// for -> döngü
+	// error (string)
+
+	//tanım
+	//koşul
+	//arttırma - eksiltme
+
+	/*
+
+
+DIŞARDAN 2 DEĞER ALIP-DEĞER DÖNDÜREN İFADE-ÇIKTI VERMEZ.
+func topla(x int, y int) int {
+return x + y
+}
+
+GERİYE İNT DEĞER DÖNDÜRÜP DIŞARDAN VERİ ALMAYAN FONK.
+func rastgeleSayiUret() int {
+	return 1
+}
+
+DIŞARDAN STRİNG ALIP-DIŞARI DEĞER DÖNDÜRMEYEN İFADE-ÇIKTI VEREN FONK.
+func yazdirAdim(ad string) {
+	fmt.Println("Hüsamettin ARABACI")
+}
+
+DIŞARDAN STRİNG DEĞER-ALIP DEĞER DÖNDÜRMEYEN-ÇIKTI VEREN FONK.
+func yazdirIsim(isim string) {
+	fmt.Println(isim)
+}
+
+
+DIŞARDAN 2 DEĞER ALIP-DEĞER DÖNDÜREN İFADE-ÇIKTI VERİR.
+  func topla(x int, y int) int {
+	return x + y
+	fmt.Println(topla(x int,y int))
+	}
+*/
