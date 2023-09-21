@@ -81,13 +81,13 @@ func main(){
 		fmt.Printf("Kartlar Yeniden Dağitiliyor\n")
 	}
 	*/
-	b:=0
+	var b int
 	fmt.Printf("Mavi Takim Ilk Indexinizi Seciniz:\n",)
-	fmt.Scanf("%d",&b)
+	fmt.Scan(&b)
 	time.Sleep(time.Second*1)
-	r:=0
+	var r int
 	fmt.Printf("Kirmizi Takim Ilk Indexinizi Seciniz:\n",)
-	fmt.Scanf("%d",&r)
+	fmt.Scan(&r)
 	time.Sleep(time.Second*1)
 	a:=0
 
@@ -115,6 +115,6 @@ func main(){
 	if a==5{
 			fmt.Printf("\nHAMLE SAYISI MAXIMUMA ULASMISTIR.\n=================================================\nYENI OYUNU BASLANILIYOR.\n")
 	}
-	fmt.Printf("MAVI TAKIMIN KARTLARI:%v \n",blueGamer)
+	fmt.Printf("\nMAVI TAKIMIN KARTLARI:%v \n",blueGamer)
 	fmt.Printf("KIRMIZI TAKIMIN KARTLARI:%v \n",redGamer)
 }
