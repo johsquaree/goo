@@ -7,33 +7,27 @@ import (
     "os/exec"
     "strings"
 )
-
 func main() {
     // Seslendirilecek metni belirleyin
     textToSpeechText := "Merhaba, Go programlama dilinde metin seslendirmeyi deniyoruz."
-
     // Seslendirmeyi yapacak bir shell komutu oluşturun (espeak kullanılıyor)
     cmd := exec.Command("espeak", "-w", "output.wav", textToSpeechText)
-
     // Shell komutunu çalıştırın
     err := cmd.Run()
     if err != nil {
         panic(err)
     }
-
     // Ses dosyasını yükleyin
     file, err := audio.OpenFile("output.wav")
     if err != nil {
         panic(err)
     }
     defer file.Close()
-
     // Ses dosyasını oynat
     player, err := wav.NewPlayer(file, 0, file.TotalDuration())
     if err != nil {
         panic(err)
     }
-
     // Ses dosyasını çal
     if err := player.Play(); err != nil {
         panic(err)
