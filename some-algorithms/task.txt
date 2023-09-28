@@ -1,3 +1,0 @@
-1-kullanıcıdan kütle ve boy verisi al
-2-alınan verileri gerekli matematiksel ifadelerle kullanıp indexi değer aralığındaki ifadelere koy
-3-değer aralıklarındaki sonuca göre çıktı ver
